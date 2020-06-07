@@ -18,7 +18,8 @@ actual class SkyweaverMatchAPIMockServiceController(
                                 id = match.id!!,
                                 player1 = PlayerData(address = match.player1!!),
                                 player2 = PlayerData(address = match.player2!!),
-                                winningPlayer = match.winner!!
+                                winningPlayer = match.winner!!,
+                                startedAt = match.createdAt?.toLocalDateTime().toString().split(".")[0] + "Z"
                         )
                     }
                 } ?: throw RuntimeException("Must supply account address")

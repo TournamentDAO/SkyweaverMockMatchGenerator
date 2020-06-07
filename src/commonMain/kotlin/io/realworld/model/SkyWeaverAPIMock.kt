@@ -1,8 +1,6 @@
 package io.realworld.model
 
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonConfiguration
 
 @Serializable
 data class SkyWeaverAPIMock(
@@ -19,6 +17,7 @@ data class SkyWeaverMatchMock(
         val player1DeckClass: String = "STR",
         val player2DeckClass: String = "STR",
         val winningPlayer: Int,
+        val startedAt: String,
         val turnNonce: Int = 1
 )
 
